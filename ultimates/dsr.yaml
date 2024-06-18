@@ -14,3 +14,101 @@ status:
     type: impairment
     duration: 30000
     description: Reduces damage dealt by approximately 50%.
+  skyblind:
+    id: 2661
+    type: delay
+    description: Player will drop an exploding AOE on their location when the debuff wears off.
+  down-for-the-count:
+    id: 3165
+    description: The player will be unable to move or take actions.
+  burning-chains:
+    id: 769
+    description: The players afflicted with this debuff will take damage unless the chain binding them together is snapped by going a long distance from eachother.
+  prey:
+    id: 562
+    type: delay
+    description: Player will be targeted by a series of falling meteors that cannot be close to eachother when the effect expires.
+  first-in-line:
+    id: 3004
+    type: indicator
+    description: Marked as the first player to be targeted for a given mechanic.
+  second-in-line:
+    id: 3005
+    type: indicator
+    description: Marked as the second player to be targeted for a given mechanic.
+  third-in-line:
+    id: 3006
+    type: indicator
+    description: Marked as the third player to be targeted for a given mechanic.
+  high-jump-target:
+    id: 2755
+    type: delay
+    description: Marked to recieve a High Jump attack, which will place a tower that must be soaked on the players current position.
+  elusive-jump-target:
+    id: 2757
+    type: delay
+    description: Marked to recieve a Elusive Jump attack, which will place a tower that must be soaked behind the player.
+  spineshatter-dive-target:
+    id: 2756
+    type: delay
+    description: Marked to recieve a Spineshatter Dive attack, which will place a tower that must be soaked in front of the player.
+  clawbound:
+    id: 2775
+    type: condition
+    decription: Bound to Niddhogg's left eye, all damage taken will also deal damage to the Left Eye. Can be traded with a party member possessing Fangbound.
+  fangbound:
+    id: 2776
+    type: condition
+    description: Bound to Niddhogg's right eye, all damage taken will heal the right eye. Can be traded with a party member possessing Clawbound.
+  bound-and-determined:
+    id: 2777
+    type: condition
+    description: Obtained by trading fangbound for clawbound, or vice versa. Disables the transition of Clawbound and Fangbound states for a short period of time. 
+  hp-recovery-down:
+    id: 2977
+    type: impairment
+    description: Reduces healing received from all sources by 20%.
+  doom:
+    id: 2976
+    type: impairment
+    description: When the timer reaches 0, the player dies.
+  spreading-flames:
+    id: 2758
+    type: delay
+    description: When the timer expires the player is hit by an AoE which will pushback everyone hit by it into the kill barrier.
+  entangled-flames:
+    id: 2759
+    type: delay
+    description: When the timer expires the player is hit by an stack which will kill unless shared by one other party member.
+  mortal-vow:
+    id: 2896
+    type: impairment
+    description: The player recieves reduced healing from all sources and takes heavy damage over time. When this debuff expires the player will have an area of effect that will pass the debuff on to other players. The buff must be passed or Niddhog will enrage.
+  mortal-attonement:
+    id: 2897
+    type: condition
+    description: The player has recently survived Mortal Vow and may no longer receive it.
+  boiling:
+    id: 2898
+    type: delay
+    description: The player will receive Pyretic when the countdown expires.
+  freezing:
+    id: 2899
+    type: delay
+    description: The player will be frozen in place with the Deep Freeze effect when the countdown expires.
+  deep-freeze:
+    id: 1254
+    type: impairment
+    description: The player is incased in ice, unable to act entirely and taking damage over time.
+  pyretic:
+    id: 960
+    type: impairment
+    description: The player takes heavy fire damage with any action taken.
+  dark-resist-down:
+    id: 3136
+    type: impairment
+    description: Dark aspected damage taken by the player is increased.
+  light-resist-down:
+    id: 3135
+    type: impairment
+    description: Light damage taken taken by the player is increased.
