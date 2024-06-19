@@ -14,6 +14,10 @@ status:
     type: impairment
     duration: 30000
     description: Reduces damage dealt by approximately 50%.
+  light-resistance-down:
+    id: 2278
+    type: impairment
+    description: The player afflicted with this will take lethal damage from all light damage sources.
   skyblind:
     id: 2661
     type: delay
@@ -24,6 +28,26 @@ status:
   burning-chains:
     id: 769
     description: The players afflicted with this debuff will take damage unless the chain binding them together is snapped by going a long distance from eachother.
+  slashing-resistance-down:
+    id: 3130
+    type: impairment
+    description: The player afflicted with this will take lethal damage from all slashing damage sources.
+  lightning-resistance-down-II:
+    id: 2998
+    type: impairment
+    description: The player afflicted with this will take lethal damage from all slashing damage sources.
+  ice-resistance-down-II:
+    id: 2903
+    type: impairment
+    description: The player afflicted with this will take lethal damage from all ice damage sources.
+  physical-vunerability-up:
+    id: 2940
+    type: impairment
+    description: The player afflicted with this will take lethal damage from all physical damage sources.
+  peircing-resistance-down:
+    id: 3131
+    type: impairment
+    description: The player afflicted with this will take lethal damage from all peircing damage sources.
   prey:
     id: 562
     type: delay
@@ -68,6 +92,10 @@ status:
     id: 2977
     type: impairment
     description: Reduces healing received from all sources by 20%.
+  thunderstruck:
+    id: 2833
+    type: delay
+    description: When the timer expires, the player will be the origin of a small lightning explosion that will both paralyze and damage down party members in its range.
   doom:
     id: 2976
     type: impairment
