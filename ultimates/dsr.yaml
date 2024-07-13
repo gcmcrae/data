@@ -140,3 +140,1596 @@ status:
     id: 3135
     type: impairment
     description: Light damage taken taken by the player is increased.
+actions:
+  holiest-of-holy:
+    id: 25300
+    damage: 67224
+    description: A raidwide that does heavy damage to the entire Party.
+  empty-dimension:
+    id: 25306
+    description: An AoE where the only safe spot is a small circle under the boss.
+  holy-shield-bash:
+    id: 25297
+    description: The cast for Holy Shieldbash. When it finishes casting, the attack targets the player holding the tether it cast out.
+    children:
+      - at: 713
+        id: holy-shield-bash-1
+  holy-shield-bash-1:
+    id: 25579
+    description: Hits the targeted player, dealing moderate damage and inflicting [s:down-for-the-count] for 3 seconds.
+  holy-bladedance:
+    id: 25298
+    damage: 22400
+    description: The target afflicted by Holy Shield Bash receives a series of high-damage attacks. Each attack in the series deals heavy damage and can be lethal if not mitigated.
+    children:
+      - at: 1381
+        id: holy-bladedance-1
+      - at: 1869
+        id: holy-bladedance-1
+      - at: 2315
+        id: holy-bladedance-1
+      - at: 2804
+        id: holy-bladedance-1
+  holy-bladedance-1:
+    id: 25299
+    damage: 22400
+    description: Each instance of Holy Bladedance inflicts heavy damage to the target. The series of attacks continues until all hits are resolved.
+  heavensblaze:
+    id: 25309
+    damage: 66133
+    description: A stack mechanic targeting a party member not being hit by Holy Bladedance. All players must gather on the targeted member to mitigate the damage.
+  hyperdimensional-slash:
+    id: 25302
+    description: Four players are marked with spread markers. Each marked player is hit by a beam, creating a black hole at the edge of the arena that kills players who get too close. One of the four non-targeted players receives a wide cleave that deals stack damage.
+    children:
+      - at: 1160
+        id: hyperdimensional-slash-1
+      - at: 1160
+        id: hyperdimensional-slash-2
+      - at: 7082
+        id: hyperdimensional-slash-3
+      - at: 8242
+        id: hyperdimensional-slash-1
+      - at: 8242
+        id: hyperdimensional-slash-2
+  hyperdimensional-slash-1:
+    id: 25303
+    damage: 54287
+    description: The initial cast of Hyperdimensional Slash, marking four players with spread markers and preparing to hit them with beams.
+  hyperdimensional-slash-2:
+    id: 25582
+    damage: 54706
+    description: Beams hit the four marked players, creating black holes at the edge of the arena that kill players who get too close.
+  hyperdimensional-slash-3:
+    id: 25365
+    description: One of the four non-targeted players is hit by a wide cleave that deals stack damage. All non-targeted players must gather to mitigate the damage.
+  faith-unmoving:
+    id: 25308
+    damage: 5197
+    description: Knocks back players from the center of the arena. This mechanic can be ignored by using a knockback prevention skill like [t:Arm's Length] or [t:Surecast].
+  shining-blade:
+    id: 25294
+    description: The boss dashes across the arena in a specific pattern, leaving bombs that explode behind him. Players caught in the explosion or in the path of his dash will take heavy damage and are likely to be killed.
+    children:
+      - at: 1068
+        id: shining-blade
+      - at: 2141
+        id: shining-blade
+      - at: 3211
+        id: shining-blade
+  execution:
+    id: 25301
+    damage: 147773
+    description: Adelphel performs an extremely high-damage tankbuster on the player with aggro after finishing Shining Blade. This attack also knocks back everyone else hit by it into the wall, killing them. It is recommended for the tank to use an invulnerability skill when taking this attack.
+  heavensflame:
+    id: 25310
+    damage: 57936
+    description: Charibert chains each player to a different party member with [s:burning-chains]. After Grineaux casts [a:faith-unmoving] knocking all party members backwards, Heavensflame hits the whole party simultaneously with spread attacks, applying extreme damage and [s:damage-down] to all players who haven't broken their chains yet.
+  full-dimension:
+    id: 25307
+    description: Grineaux places a point-blank AoE beneath him, requiring players to move out from under him. He can either cast this or [a:empty-dimension].
+  planar-prison:
+    id: 25313
+    damage: 27276
+    description: Charibert sections off a small circle to the side of the arena, and Grinneaux forces your party into it by pulling you to him. The initial cast deals slight damage. Touching the walls of the prison will instantly kill.
+  brightwinged-flight:
+    id: 25366
+    description: Adelphel protects Charibert. This is a flavor ability and can be ignored.
+  planar-prison-1:
+    id: 25580
+    description: Charibert sections off a small circle to the side of the arena, and Grinneaux forces your party into it by pulling you to him. The initial cast deals slight damage. Touching the walls of the prison will instantly kill. If you have the [s:planar-prison] debuff and try to leave, you will di
+    children:
+      - at: 355
+        id: planar-prison-1
+      - at: 712
+        id: planar-prison-1
+      - at: 1070
+        id: planar-prison-1
+      - at: 1425
+        id: planar-prison-1
+      - at: 1781
+        id: planar-prison-1
+      - at: 2139
+        id: planar-prison-1
+      - at: 2496
+        id: planar-prison-1
+      - at: 2850
+        id: planar-prison-1
+      - at: 3207
+        id: planar-prison-1
+      - at: 3565
+        id: planar-prison-1
+      - at: 3922
+        id: planar-prison-1
+      - at: 4278
+        id: planar-prison-1
+      - at: 4636
+        id: planar-prison-1
+      - at: 4992
+        id: planar-prison-1
+      - at: 5348
+        id: planar-prison-1
+      - at: 5703
+        id: planar-prison-1
+      - at: 6059
+        id: planar-prison-1
+      - at: 6415
+        id: planar-prison-1
+      - at: 6772
+        id: planar-prison-1
+      - at: 7129
+        id: planar-prison-1
+      - at: 7485
+        id: planar-prison-1
+      - at: 7842
+        id: planar-prison-1
+      - at: 8197
+        id: planar-prison-1
+      - at: 8552
+        id: planar-prison-1
+      - at: 8909
+        id: planar-prison-1
+      - at: 9267
+        id: planar-prison-1
+      - at: 9624
+        id: planar-prison-1
+  shockwave:
+    id: 25315
+    damage: 15570
+    description: A repeating AoE that deals damage to both players and Haurchefant.
+  brightwing:
+    id: 25369
+    damage: 59934
+    description: Charibert casts two small cone AoEs targeting the closest players. This attack inflicts [s:skyblind] and [s:light-resistance-down].
+  skyblind:
+    id: 25370
+    damage: 199455
+    description: This attack happens 5 seconds after the [s:skyblind] debuff wears off, creating a small explosion based on the players location. It deals extreme damage and applies [s:damage-down] to all players caught in it.
+  pure-of-heart:
+    id: 25316
+    damage: 67014
+    description: A slow-casting skill that deals more damage the higher Charibert's HP is. If his HP is over 30%, it will be a guaranteed wipe. Higher percentages under 30% will still require heavy mitigation.
+  ascalons-mercy-concealed:
+    id: 25544
+    description: The boss releases conal AoEs targeting the locations where players stood at the end of the cast bar.
+    children:
+      - at: 1560
+        id: ascalons-mercy-concealed-1
+  ascalons-mercy-concealed-1:
+    id: 25545
+    description: Placeholder description for Ascalon's Mercy Concealed
+  ascalons-might:
+    id: 25541
+    damage: 175238
+    description: A tankbuster that deals massive damage to the player with the highest threat. It hits three times in a large cone.
+    children:
+      - at: 1697
+        id: ascalons-might
+      - at: 3346
+        id: ascalons-might
+  knights-of-the-round:
+    id: 25581
+    description: King Thordan summons his mighty Knights of the Round to assist in his next attack. This ability is mainly flavor and can be ignored.
+  strength-of-the-ward:
+    id: 25555
+    description: The first major mechanic of Phase 2, consisting of multiple smaller mechanics.
+  lightning-storm:
+    id: 25548
+    description: Thordan casts a spell from the side of the arena. When released, it hits everyone with a small AoE that deals moderate damage and applies [s:lightning-resistance-down-II]. Overlapping with another player will result in death.
+  spiral-thrust:
+    id: 25556
+    description: The three knights on the sides of the arena charge through, knocking back and killing anyone caught in front of them. This leaves two large triangular safe zones.
+  heavy-impact:
+    id: 25558
+    description: The warrior in the middle of the arena hits the ground, causing a donut AoE to expand out in waves ([ms:expanding-rings]). Players must stand just outside one ring, then step into that ring once it resolves to avoid the next ring.
+  lightning-storm-1:
+    id: 25549
+    damage: 49745
+    description: The resolution of the Lightning Storm mechanic, dealing moderate damage to players and applying [s:lightning-resistance-down-II].
+  heavy-impact-1:
+    id: 25559
+    description: The initial ring of the Heavy Impact mechanic.
+    children:
+      - at: 1873
+        id: heavy-impact-2
+  heavy-impact-2:
+    id: 25560
+    description: The second ring of the Heavy Impact mechanic.
+    children:
+      - at: 1871
+        id: heavy-impact-3
+      - at: 3741
+        id: heavy-impact-4
+  heavy-impact-3:
+    id: 25561
+    description: The third ring of the Heavy Impact mechanic.
+  heavy-impact-4:
+    id: 25562
+    description: The fourth and final ring of the Heavy Impact mechanic.
+  dimensional-collapse:
+    id: 25563
+    description: A knight spawns multiple growing AoEs on the floor, dealing extreme damage and applying [s:slow] and [s:damage-down] to any player caught in them.
+  the-dragons-rage:
+    id: 25550
+    description: The cast for Dragon's Rage, targeting the player closest to King Thordan. Players must stack to soak the damage.
+    children:
+    - at: 2000
+      id: dragons-rage-1
+
+  dimensional-collapse-1:
+    id: 25564
+    description: A knight spawns multiple growing AoEs on the floor, dealing extreme damage and applying [s:slow] and [s:damage-down] to any player caught in them.
+  skyward-leap:
+    id: 25565
+    damage: 66567
+    description: Three defamation markers are placed on three random non-tank players. They need to position themselves in the safe spots furthest from Thordan.
+    children:
+      - at: 89
+        id: skyward-leap
+  holy-shield-bash:
+    id: 25297
+    description: The cast for Holy Shieldbash. When it finishes casting, the attack targets the player holding the tether it created.
+  the-dragons-rage-1:
+    id: 25551
+    damage: 68448
+    description: A stack mechanic targeting the player closest to King Thordan. Three players and both tanks should soak this.
+  holy-shield-bash-1:
+    id: 25579
+    description: Hits the player targeted by the tether, dealing moderate damage and inflicting [s:down-for-the-count] for 3 seconds.
+  holy-bladedance:
+    id: 25298
+    damage: 45072
+    description: The target afflicted by Holy Shield Bash receives a series of high-damage attacks. Each attack in the series deals heavy damage and can be lethal if not mitigated.
+  holy-bladedance-1:
+    id: 25299
+    damage: 45072
+    description: Each instance of Holy Bladedance inflicts heavy damage to the target. The series of attacks continues until all hits are resolved.
+    children:
+      - at: 446
+        id: holy-bladedance-1
+      - at: 891
+        id: holy-bladedance-1
+  conviction:
+    id: 25567
+    damage: 5161
+    description: Six towers spawn around the arena. Non-tank players must coordinate to soak these towers.
+  ancient-quaga:
+    id: 25542
+    damage: 95096
+    description: Placeholder description for Ancient Quaga
+  heavenly-heel:
+    id: 25543
+    damage: 186855
+    description: Placeholder description for Heavenly Heel
+  sanctity-of-the-ward:
+    id: 25569
+    description: Placeholder description for Sanctity of the Ward
+  the-dragons-gaze:
+    id: 25552
+    description: Placeholder description for the Dragon's Gaze
+  sacred-sever:
+    id: 25571
+    damage: 46813
+    description: Placeholder description for Sacred Sever
+    children:
+      - at: 1782
+        id: sacred-sever
+  shining-blade:
+    id: 25570
+    description: Placeholder description for Shining Blade
+  the-dragons-gaze-1:
+    id: 25553
+    description: Placeholder description for the Dragon's Gaze
+  the-dragons-glory:
+    id: 25554
+    description: Placeholder description for the Dragon's Glory
+  heavens-stake:
+    id: 28590
+    description: Placeholder description for Heavens' Stake
+    children:
+      - at: 489
+        id: heavens-stake-1
+      - at: 489
+        id: heavens-stake-2
+  heavens-stake-1:
+    id: 28591
+    description: Placeholder description for Heavens' Stake
+  heavens-stake-2:
+    id: 28592
+    description: Placeholder description for Heavens' Stake
+  hiemal-storm:
+    id: 25575
+    damage: 34879
+    description: Placeholder description for Hiemal Storm
+  conviction-1:
+    id: 29564
+    damage: 5443
+    description: Placeholder description for Conviction
+  holy-comet:
+    id: 25577
+    damage: 1805
+    description: Placeholder description for Holy Comet
+    children:
+      - at: 1427
+        id: holy-comet
+      - at: 2854
+        id: holy-comet
+      - at: 4280
+        id: holy-comet
+      - at: 5707
+        id: holy-comet
+      - at: 7131
+        id: holy-comet
+      - at: 8559
+        id: holy-comet
+  faith-unmoving:
+    id: 25308
+    damage: 5016
+    description: Placeholder description for Faith Unmoving
+  conviction-2:
+    id: 28651
+    damage: 5330
+    description: Placeholder description for Conviction
+  ultimate-end:
+    id: 25533
+    damage: 97761
+    description: Placeholder description for Ultimate End
+  broad-swing:
+    id: 25537
+    description: Placeholder description for Broad Swing
+    children:
+      - at: 846
+        id: broad-swing-1
+      - at: 1782
+        id: broad-swing-1
+      - at: 2807
+        id: broad-swing-1
+  broad-swing-1:
+    id: 25538
+    description: Placeholder description for Broad Swing
+  final-chorus:
+    id: 26376
+    damage: 98952
+    description: Placeholder description for Final Chorus
+  dive-from-grace:
+    id: 26381
+    description: Placeholder description for Dive from Grace
+  gnash-and-lash:
+    id: 26386
+    description: Placeholder description for Gnash and Lash
+  dark-high-jump:
+    id: 26382
+    damage: 20099
+    description: Placeholder description for Dark High Jump
+  dark-spineshatter-dive:
+    id: 26383
+    damage: 20093
+    description: Placeholder description for Dark Spineshatter Dive
+  dark-elusive-jump:
+    id: 26384
+    damage: 23066
+    description: Placeholder description for Dark Elusive Jump
+  eye-of-the-tyrant:
+    id: 26388
+    damage: 78004
+    description: Placeholder description for Eye of the Tyrant
+  gnashing-wheel:
+    id: 26389
+    description: Placeholder description for Gnashing Wheel
+  darkdragon-dive:
+    id: 26385
+    damage: 15597
+    description: Placeholder description for Darkdragon Dive
+  lashing-wheel:
+    id: 26390
+    damage: 24002
+    description: Placeholder description for Lashing Wheel
+  geirskogul:
+    id: 26378
+    description: Placeholder description for Geirskogul
+  drachenlance:
+    id: 26379
+    description: Placeholder description for Drachenlance
+    children:
+      - at: 623
+        id: drachenlance-1
+  drachenlance-1:
+    id: 26380
+    description: Placeholder description for Drachenlance
+  darkdragon-dive-1:
+    id: 26391
+    damage: 21006
+    description: Placeholder description for Darkdragon Dive
+  darkdragon-dive-2:
+    id: 26392
+    damage: 15395
+    description: Placeholder description for Darkdragon Dive
+  darkdragon-dive-3:
+    id: 26393
+    damage: 15663
+    description: Placeholder description for Darkdragon Dive
+  soul-tether:
+    id: 26396
+    damage: 234188
+    description: Placeholder description for Soul Tether
+  resentment:
+    id: 26810
+    damage: 43569
+    description: Placeholder description for Resentment
+  hatebound:
+    id: 26814
+    description: Placeholder description for Hatebound
+  flare-nova:
+    id: 26817
+    damage: 63672
+    description: Placeholder description for Flare Nova
+    children:
+      - at: 179
+        id: flare-nova
+  flare-star:
+    id: 26815
+    damage: 60078
+    description: Placeholder description for Flare Star
+    children:
+      - at: 89
+        id: flare-star
+  mirage-dive:
+    id: 26819
+    damage: 59911
+    description: Placeholder description for Mirage Dive
+    children:
+      - at: 5931
+        id: mirage-dive-1
+      - at: 11054
+        id: mirage-dive-1
+      - at: 16179
+        id: mirage-dive-1
+  mirage-dive-1:
+    id: 26820
+    damage: 59911
+    description: Placeholder description for Mirage Dive
+  brightwinged-flight:
+    id: 25366
+    description: Placeholder description for Brightwinged Flight
+  planar-prison:
+    id: 25313
+    damage: 27798
+    description: Placeholder description for Planar Prison
+    children:
+      - at: 1960
+        id: planar-prison-1
+      - at: 2317
+        id: planar-prison-1
+      - at: 2674
+        id: planar-prison-1
+      - at: 3030
+        id: planar-prison-1
+      - at: 3385
+        id: planar-prison-1
+      - at: 3742
+        id: planar-prison-1
+      - at: 4097
+        id: planar-prison-1
+      - at: 4454
+        id: planar-prison-1
+      - at: 4810
+        id: planar-prison-1
+      - at: 5167
+        id: planar-prison-1
+      - at: 5523
+        id: planar-prison-1
+      - at: 5879
+        id: planar-prison-1
+      - at: 6236
+        id: planar-prison-1
+      - at: 6593
+        id: planar-prison-1
+      - at: 6951
+        id: planar-prison-1
+      - at: 7307
+        id: planar-prison-1
+      - at: 7664
+        id: planar-prison-1
+      - at: 8021
+        id: planar-prison-1
+      - at: 8377
+        id: planar-prison-1
+      - at: 8732
+        id: planar-prison-1
+      - at: 9089
+        id: planar-prison-1
+      - at: 9445
+        id: planar-prison-1
+      - at: 9803
+        id: planar-prison-1
+  planar-prison-1:
+    id: 25580
+    description: Placeholder description for Planar Prison
+    children:
+      - at: 358
+        id: planar-prison-1
+      - at: 716
+        id: planar-prison-1
+      - at: 1071
+        id: planar-prison-1
+      - at: 1426
+        id: planar-prison-1
+  spear-of-the-fury:
+    id: 25314
+    description: Placeholder description for Spear of the Fury
+  shockwave:
+    id: 25368
+    damage: 8409
+    description: Placeholder description for Shockwave
+    children:
+      - at: 1069
+        id: shockwave
+      - at: 2137
+        id: shockwave
+  brightwing:
+    id: 25369
+    damage: 56204
+    description: Placeholder description for Brightwing
+  skyblind:
+    id: 25370
+    description: Placeholder description for Skyblind
+  pure-of-heart:
+    id: 25316
+    damage: 67715
+    description: Placeholder description for Pure of Heart
+  incarnation:
+    id: 27526
+    description: Placeholder description for Incarnation
+  the-dragons-eye:
+    id: 27527
+    description: Placeholder description for the Dragon's Eye
+  wrath-of-the-heavens:
+    id: 27529
+    description: Placeholder description for Wrath of the Heavens
+  chain-lightning:
+    id: 27535
+    description: Placeholder description for Chain Lightning
+  twisting-dive:
+    id: 27531
+    description: Placeholder description for Twisting Dive
+  skyward-leap-1:
+    id: 29346
+    damage: 36934
+    description: Placeholder description for Skyward Leap
+  spiral-pierce:
+    id: 27530
+    damage: 66077
+    description: Placeholder description for Spiral Pierce
+  ascalons-mercy-revealed:
+    id: 25546
+    damage: 20035
+    description: Placeholder description for Ascalon's Mercy Revealed
+  liquid-heaven:
+    id: 27537
+    damage: 13339
+    description: Placeholder description for Liquid Heaven
+    children:
+      - at: 1158
+        id: liquid-heaven
+      - at: 2319
+        id: liquid-heaven
+  altar-flare:
+    id: 25572
+    description: Placeholder description for Altar Flare
+  altar-flare-1:
+    id: 25573
+    description: Placeholder description for Altar Flare
+  cauterize:
+    id: 27533
+    description: Placeholder description for Cauterize
+  empty-dimension:
+    id: 25306
+    description: Placeholder description for Empty Dimension
+  death-of-the-heavens:
+    id: 27538
+    description: Placeholder description for Death of the Heavens
+  deathstorm:
+    id: 27540
+    description: Placeholder description for Deathstorm
+  spear-of-the-fury-1:
+    id: 27539
+    description: Placeholder description for Spear of the Fury
+  wings-of-salvation:
+    id: 27542
+    description: Placeholder description for Wings of Salvation
+  heavensflame:
+    id: 25310
+    damage: 58283
+    description: Placeholder description for Heavensflame
+  wyrmclaw:
+    id: 27946
+    damage: 19630
+    description: Placeholder description for Wyrmclaw
+    children:
+      - at: 3119
+        id: wyrmclaw
+      - at: 3163
+        id: wyrmclaw-1
+  wyrmclaw-1:
+    id: 27938
+    damage: 20899
+    description: Placeholder description for Wyrmclaw
+    children:
+      - at: 3076
+        id: wyrmclaw-1
+  great-wyrmsbreath:
+    id: 27956
+    description: Placeholder description for Great Wyrmsbreath
+  dread-wyrmsbreath:
+    id: 27955
+    description: Placeholder description for Dread Wyrmsbreath
+  swirling-blizzard:
+    id: 27960
+    description: Placeholder description for Swirling Blizzard
+  ice-breath:
+    id: 27959
+    damage: 32293
+    description: Placeholder description for Ice Breath
+  staggering-breath:
+    id: 27965
+    damage: 142765
+    description: Placeholder description for Staggering Breath
+  flame-breath:
+    id: 27958
+    damage: 33023
+    description: Placeholder description for Flame Breath
+  dark-breath:
+    id: 27963
+    description: Placeholder description for Dark Breath
+  mortal-vow:
+    id: 27952
+    damage: 14810
+    description: Placeholder description for Mortal Vow
+  akh-afah:
+    id: 27969
+    description: Placeholder description for Akh Afah
+    children:
+      - at: 224
+        id: akh-afah-2
+      - at: 224
+        id: akh-afah-3
+  akh-afah-1:
+    id: 27971
+    description: Placeholder description for Akh Afah
+  akh-afah-2:
+    id: 27970
+    damage: 74251
+    description: Placeholder description for Akh Afah
+  akh-afah-3:
+    id: 27972
+    damage: 74478
+    description: Placeholder description for Akh Afah
+  hallowed-wings:
+    id: 27939
+    description: Placeholder description for Hallowed Wings
+  cauterize-1:
+    id: 27966
+    damage: 55134
+    description: Placeholder description for Cauterize
+  hallowed-plume:
+    id: 27945
+    damage: 133630
+    description: Placeholder description for Hallowed Plume
+  hallowed-wings-1:
+    id: 27941
+    description: Placeholder description for Hallowed Wings
+  mortal-vow-1:
+    id: 27953
+    damage: 14754
+    description: Placeholder description for Mortal Vow
+  wroth-flames:
+    id: 27973
+    description: Placeholder description for Wroth Flames
+  akh-morn:
+    id: 27974
+    description: Placeholder description for Akh Morn
+  cauterize-2:
+    id: 27967
+    damage: 166411
+    description: Placeholder description for Cauterize
+  akh-morn-1:
+    id: 27975
+    damage: 72756
+    description: Placeholder description for Akh Morn
+    children:
+      - at: 1561
+        id: akh-morn-1
+      - at: 3122
+        id: akh-morn-1
+  hot-tail:
+    id: 27949
+    description: Placeholder description for Hot Tail
+  hot-tail-1:
+    id: 27950
+    description: Placeholder description for Hot Tail
+  spreading-flames:
+    id: 29739
+    description: Placeholder description for Spreading Flames
+  entangled-flames:
+    id: 29740
+    damage: 42956
+    description: Placeholder description for Entangled Flames
+  hallowed-wings-2:
+    id: 27942
+    description: Placeholder description for Hallowed Wings
+  hallowed-wings-3:
+    id: 27944
+    description: Placeholder description for Hallowed Wings
+  great-wyrmsbreath-1:
+    id: 27957
+    description: Placeholder description for Great Wyrmsbreath
+  dread-wyrmsbreath-1:
+    id: 27954
+    description: Placeholder description for Dread Wyrmsbreath
+  holy-breath:
+    id: 27964
+    description: Placeholder description for Holy Breath
+  touchdown:
+    id: 27968
+    damage: 27768
+    description: Placeholder description for Touchdown
+  shockwave-1:
+    id: 29156
+    damage: 37534
+    description: Placeholder description for Shockwave
+  alternative-end:
+    id: 29752
+    damage: 123994
+    description: Placeholder description for Alternative End
+  exaflares-edge:
+    id: 28059
+    description: Placeholder description for Exaflare's Edge
+    children:
+      - at: 892
+        id: exaflares-edge-1
+  exaflares-edge-1:
+    id: 28060
+    description: Placeholder description for Exaflare's Edge
+  ice-of-ascalon:
+    id: 28050
+    description: Placeholder description for Ice of Ascalon
+  exaflares-edge-2:
+    id: 28061
+    description: Placeholder description for Exaflare's Edge
+    children:
+      - at: 1867
+        id: exaflares-edge-2
+      - at: 3737
+        id: exaflares-edge-2
+  trinity:
+    id: 28062
+    description: Placeholder description for Trinity
+    children:
+      - at: 1072
+        id: trinity-1
+      - at: 1072
+        id: trinity-2
+      - at: 1072
+        id: trinity-3
+      - at: 4055
+        id: trinity
+      - at: 5124
+        id: trinity-1
+      - at: 5124
+        id: trinity-2
+      - at: 5124
+        id: trinity-3
+  trinity-1:
+    id: 28065
+    damage: 44268
+    description: Placeholder description for Trinity
+  trinity-2:
+    id: 28064
+    damage: 51069
+    description: Placeholder description for Trinity
+  trinity-3:
+    id: 28063
+    damage: 52593
+    description: Placeholder description for Trinity
+  akh-morns-edge:
+    id: 28051
+    description: Placeholder description for Akh Morn's Edge
+    children:
+      - at: 712
+        id: akh-morns-edge-1
+      - at: 712
+        id: akh-morns-edge-2
+      - at: 712
+        id: akh-morns-edge-3
+  akh-morns-edge-1:
+    id: 29453
+    damage: 38663
+    description: Placeholder description for Akh Morn's Edge
+  akh-morns-edge-2:
+    id: 29452
+    damage: 70567
+    description: Placeholder description for Akh Morn's Edge
+  akh-morns-edge-3:
+    id: 29454
+    damage: 138558
+    description: Placeholder description for Akh Morn's Edge
+  akh-morns-edge-4:
+    id: 28052
+    description: Placeholder description for Akh Morn's Edge
+    children:
+      - at: 801
+        id: akh-morns-edge-5
+      - at: 801
+        id: akh-morns-edge-6
+      - at: 1069
+        id: akh-morns-edge-4
+      - at: 1870
+        id: akh-morns-edge-5
+      - at: 1870
+        id: akh-morns-edge-6
+      - at: 2138
+        id: akh-morns-edge-4
+      - at: 2937
+        id: akh-morns-edge-5
+      - at: 2937
+        id: akh-morns-edge-6
+      - at: 3205
+        id: akh-morns-edge-7
+      - at: 4006
+        id: akh-morns-edge-5
+      - at: 4006
+        id: akh-morns-edge-6
+      - at: 3210
+        id: akh-morns-edge-4
+      - at: 4280
+        id: akh-morns-edge-7
+      - at: 5083
+        id: akh-morns-edge-5
+      - at: 5083
+        id: akh-morns-edge-6
+      - at: 4278
+        id: akh-morns-edge-4
+      - at: 5347
+        id: akh-morns-edge-7
+      - at: 6148
+        id: akh-morns-edge-5
+      - at: 6148
+        id: akh-morns-edge-6
+  akh-morns-edge-5:
+    id: 28054
+    damage: 73401
+    description: Placeholder description for Akh Morn's Edge
+  akh-morns-edge-6:
+    id: 28055
+    damage: 142339
+    description: Placeholder description for Akh Morn's Edge
+  akh-morns-edge-7:
+    id: 28053
+    description: Placeholder description for Akh Morn's Edge
+  gigaflares-edge:
+    id: 28057
+    damage: 87310
+    description: Placeholder description for Gigaflare's Edge
+  gigaflares-edge-2:
+    id: 28114
+    damage: 73054
+    description: Placeholder description for Gigaflare's Edge
+    children:
+      - at: 3963
+        id: gigaflares-edge-3
+  gigaflares-edge-3:
+    id: 28115
+    damage: 64964
+    description: Placeholder description for Gigaflare's Edge
+  flames-of-ascalon:
+    id: 28049
+    description: Placeholder description for Flames of Ascalon
+timeline:
+  - at: 12082
+    id: ascalons-mercy-concealed
+  - at: 15247
+    id: ascalons-might
+  - at: 22475
+    id: knights-of-the-round
+  - at: 29568
+    id: strength-of-the-ward
+  - at: 32644
+    id: <untargetable>
+  - at: 41912
+    id: lightning-storm
+  - at: 42225
+    id: spiral-thrust
+  - at: 42225
+    id: heavy-impact
+  - at: 42404
+    id: lightning-storm-1
+  - at: 44135
+    id: heavy-impact-1
+  - at: 47300
+    id: ascalons-mercy-concealed
+  - at: 47878
+    id: heavy-impact-3
+  - at: 48858
+    id: ascalons-mercy-concealed-1
+  - at: 49750
+    id: heavy-impact-4
+  - at: 57317
+    id: dimensional-collapse
+  - at: 57317
+    id: the-dragons-rage
+  - at: 58341
+    id: dimensional-collapse-1
+  - at: 58386
+    id: skyward-leap
+  - at: 58697
+    id: holy-shield-bash
+  - at: 58742
+    id: the-dragons-rage-1
+  - at: 59409
+    id: holy-shield-bash-1
+  - at: 61723
+    id: holy-bladedance
+  - at: 62081
+    id: conviction
+  - at: 62170
+    id: holy-bladedance-1
+  - at: 63729
+    id: <targetable>
+  - at: 69789
+    id: ancient-quaga
+  - at: 79959
+    id: heavenly-heel
+  - at: 83079
+    id: ascalons-might
+  - at: 90351
+    id: knights-of-the-round
+  - at: 97444
+    id: sanctity-of-the-ward
+  - at: 100520
+    id: <untargetable>
+  - at: 110055
+    id: the-dragons-gaze
+  - at: 111033
+    id: sacred-sever
+  - at: 111123
+    id: shining-blade
+  - at: 111212
+    id: the-dragons-gaze-1
+  - at: 111212
+    id: the-dragons-glory
+  - at: 112682
+    id: shining-blade
+  - at: 112816
+    id: sacred-sever
+  - at: 114242
+    id: shining-blade
+  - at: 114599
+    id: sacred-sever
+  - at: 128513
+    id: heavens-stake
+  - at: 129225
+    id: hiemal-storm
+  - at: 133412
+    id: conviction-1
+  - at: 134837
+    id: holy-comet
+  - at: 134881
+    id: <untargetable>
+  - at: 134881
+    id: <untargetable>
+  - at: 136308
+    id: <untargetable>
+  - at: 136308
+    id: <untargetable>
+  - at: 137735
+    id: <untargetable>
+  - at: 137735
+    id: <untargetable>
+  - at: 139161
+    id: <untargetable>
+  - at: 139161
+    id: <untargetable>
+  - at: 140589
+    id: <untargetable>
+  - at: 140589
+    id: <untargetable>
+  - at: 142013
+    id: <untargetable>
+  - at: 142013
+    id: <untargetable>
+  - at: 143440
+    id: <untargetable>
+  - at: 143440
+    id: <untargetable>
+  - at: 143795
+    id: faith-unmoving
+  - at: 146740
+    id: conviction-2
+  - at: 151155
+    id: <targetable>
+  - at: 164745
+    id: ultimate-end
+  - at: 177308
+    id: broad-swing
+  - at: 193613
+    id: <targetable>
+  - at: 193660
+    id: final-chorus
+  - at: 211841
+    id: dive-from-grace
+  - at: 221563
+    id: gnash-and-lash
+  - at: 221652
+    id: dark-high-jump
+  - at: 221652
+    id: dark-spineshatter-dive
+  - at: 221652
+    id: dark-elusive-jump
+  - at: 221831
+    id: eye-of-the-tyrant
+  - at: 225263
+    id: gnashing-wheel
+  - at: 228249
+    id: darkdragon-dive
+  - at: 228382
+    id: lashing-wheel
+  - at: 231680
+    id: dark-elusive-jump
+  - at: 231680
+    id: dark-spineshatter-dive
+  - at: 235376
+    id: geirskogul
+  - at: 238271
+    id: darkdragon-dive
+  - at: 242680
+    id: dark-high-jump
+  - at: 243081
+    id: gnash-and-lash
+  - at: 243349
+    id: eye-of-the-tyrant
+  - at: 245356
+    id: geirskogul
+  - at: 246740
+    id: gnashing-wheel
+  - at: 249274
+    id: darkdragon-dive
+  - at: 249851
+    id: lashing-wheel
+  - at: 256398
+    id: geirskogul
+  - at: 261433
+    id: drachenlance
+  - at: 268561
+    id: darkdragon-dive-1
+  - at: 275641
+    id: soul-tether
+  - at: 275641
+    id: geirskogul
+  - at: 299609
+    id: drachenlance
+  - at: 325723
+    id: <untargetable>
+  - at: 325723
+    id: <targetable>
+  - at: 325723
+    id: <targetable>
+  - at: 328841
+    id: <untargetable>
+  - at: 333029
+    id: resentment
+  - at: 341412
+    id: hatebound
+  - at: 349519
+    id: flare-nova
+  - at: 355712
+    id: flare-star
+  - at: 368276
+    id: mirage-dive
+  - at: 384231
+    id: <untargetable>
+  - at: 393235
+    id: <untargetable>
+  - at: 412835
+    id: <untargetable>
+  - at: 412925
+    id: brightwinged-flight
+  - at: 412925
+    id: planar-prison
+  - at: 413371
+    id: <targetable>
+  - at: 422014
+    id: <targetable>
+  - at: 422905
+    id: spear-of-the-fury
+  - at: 423083
+    id: planar-prison-1
+  - at: 424732
+    id: shockwave
+  - at: 424866
+    id: planar-prison-1
+  - at: 425802
+    id: shockwave
+  - at: 425936
+    id: planar-prison-1
+  - at: 426872
+    id: shockwave
+  - at: 427006
+    id: planar-prison-1
+  - at: 427938
+    id: shockwave
+  - at: 428072
+    id: planar-prison-1
+  - at: 428784
+    id: brightwing
+  - at: 428784
+    id: planar-prison-1
+  - at: 429006
+    id: shockwave
+  - at: 429140
+    id: planar-prison-1
+  - at: 430078
+    id: shockwave
+  - at: 430211
+    id: planar-prison-1
+  - at: 431148
+    id: shockwave
+  - at: 431282
+    id: planar-prison-1
+  - at: 432217
+    id: shockwave
+  - at: 432349
+    id: planar-prison-1
+  - at: 433286
+    id: shockwave
+  - at: 433421
+    id: planar-prison-1
+  - at: 433823
+    id: brightwing
+  - at: 434134
+    id: planar-prison-1
+  - at: 434357
+    id: shockwave
+  - at: 434491
+    id: planar-prison-1
+  - at: 435428
+    id: shockwave
+  - at: 435562
+    id: planar-prison-1
+  - at: 436497
+    id: shockwave
+  - at: 436629
+    id: planar-prison-1
+  - at: 436762
+    id: skyblind
+  - at: 436986
+    id: planar-prison-1
+  - at: 437564
+    id: shockwave
+  - at: 437699
+    id: planar-prison-1
+  - at: 438636
+    id: shockwave
+  - at: 438769
+    id: planar-prison-1
+  - at: 438858
+    id: brightwing
+  - at: 439127
+    id: planar-prison-1
+  - at: 439708
+    id: shockwave
+  - at: 439841
+    id: planar-prison-1
+  - at: 440776
+    id: shockwave
+  - at: 440908
+    id: planar-prison-1
+  - at: 441799
+    id: skyblind
+  - at: 441845
+    id: shockwave
+  - at: 441978
+    id: planar-prison-1
+  - at: 442915
+    id: shockwave
+  - at: 443048
+    id: planar-prison-1
+  - at: 443894
+    id: brightwing
+  - at: 443984
+    id: shockwave
+  - at: 444118
+    id: planar-prison-1
+  - at: 445051
+    id: shockwave
+  - at: 445184
+    id: planar-prison-1
+  - at: 446121
+    id: shockwave
+  - at: 446835
+    id: skyblind
+  - at: 447192
+    id: shockwave
+  - at: 448929
+    id: pure-of-heart
+  - at: 449329
+    id: shockwave
+  - at: 450974
+    id: <targetable>
+  - at: 451018
+    id: <untargetable>
+  - at: 451866
+    id: skyblind
+  - at: 452534
+    id: shockwave
+  - at: 476601
+    id: <targetable>
+  - at: 480654
+    id: incarnation
+  - at: 486398
+    id: <untargetable>
+  - at: 486398
+    id: <untargetable>
+  - at: 486398
+    id: <untargetable>
+  - at: 486797
+    id: the-dragons-eye
+  - at: 498389
+    id: knights-of-the-round
+  - at: 505476
+    id: wrath-of-the-heavens
+  - at: 508550
+    id: <untargetable>
+  - at: 514964
+    id: chain-lightning
+  - at: 517325
+    id: twisting-dive
+  - at: 517371
+    id: skyward-leap-1
+  - at: 517415
+    id: spiral-pierce
+  - at: 523702
+    id: ascalons-mercy-revealed
+  - at: 523744
+    id: liquid-heaven
+  - at: 527132
+    id: altar-flare
+  - at: 527222
+    id: liquid-heaven
+  - at: 527624
+    id: altar-flare-1
+  - at: 528380
+    id: liquid-heaven
+  - at: 529137
+    id: altar-flare-1
+  - at: 530519
+    id: cauterize
+  - at: 530654
+    id: altar-flare-1
+  - at: 530742
+    id: empty-dimension
+  - at: 531720
+    id: <targetable>
+  - at: 532166
+    id: altar-flare-1
+  - at: 537780
+    id: ancient-quaga
+  - at: 548204
+    id: heavenly-heel
+  - at: 551327
+    id: ascalons-might
+  - at: 558585
+    id: knights-of-the-round
+  - at: 565663
+    id: death-of-the-heavens
+  - at: 568739
+    id: <untargetable>
+  - at: 572618
+    id: deathstorm
+  - at: 580816
+    id: heavy-impact
+  - at: 582419
+    id: lightning-storm
+  - at: 582685
+    id: spear-of-the-fury-1
+  - at: 582685
+    id: twisting-dive
+  - at: 582685
+    id: cauterize
+  - at: 582729
+    id: heavy-impact-1
+  - at: 582908
+    id: lightning-storm-1
+  - at: 584599
+    id: heavy-impact-2
+  - at: 592799
+    id: wings-of-salvation
+  - at: 594802
+    id: the-dragons-gaze
+  - at: 595917
+    id: faith-unmoving
+  - at: 595961
+    id: the-dragons-gaze-1
+  - at: 595961
+    id: the-dragons-glory
+  - at: 598460
+    id: heavensflame
+  - at: 611507
+    id: <targetable>
+  - at: 619657
+    id: ancient-quaga
+  - at: 629809
+    id: heavenly-heel
+  - at: 639695
+    id: <untargetable>
+  - at: 649985
+    id: <targetable>
+  - at: 649985
+    id: <targetable>
+  - at: 655240
+    id: wyrmclaw
+  - at: 667797
+    id: great-wyrmsbreath
+  - at: 667797
+    id: dread-wyrmsbreath
+  - at: 668508
+    id: swirling-blizzard
+  - at: 668597
+    id: ice-breath
+  - at: 668599
+    id: staggering-breath
+  - at: 668599
+    id: flame-breath
+  - at: 668599
+    id: dark-breath
+  - at: 671579
+    id: wyrmclaw
+  - at: 675761
+    id: mortal-vow
+  - at: 686889
+    id: akh-afah
+  - at: 690903
+    id: <untargetable>
+  - at: 692105
+    id: <targetable>
+  - at: 700214
+    id: hallowed-wings
+  - at: 701280
+    id: cauterize-1
+  - at: 701280
+    id: <untargetable>
+  - at: 701368
+    id: hallowed-plume
+  - at: 701368
+    id: hallowed-wings-1
+  - at: 701368
+    id: hallowed-plume
+  - at: 704353
+    id: <targetable>
+  - at: 706535
+    id: wyrmclaw
+  - at: 709832
+    id: mortal-vow-1
+  - at: 712769
+    id: wyrmclaw-1
+  - at: 715307
+    id: wroth-flames
+  - at: 715797
+    id: <untargetable>
+  - at: 716956
+    id: <targetable>
+  - at: 726085
+    id: akh-morn
+  - at: 726174
+    id: cauterize-2
+  - at: 726174
+    id: <untargetable>
+  - at: 727734
+    id: akh-morn-1
+  - at: 731346
+    id: <targetable>
+  - at: 732593
+    id: wyrmclaw-1
+  - at: 737990
+    id: hot-tail
+  - at: 738747
+    id: wyrmclaw-1
+  - at: 738970
+    id: hot-tail-1
+  - at: 739907
+    id: spreading-flames
+  - at: 739908
+    id: entangled-flames
+  - at: 739908
+    id: spreading-flames
+  - at: 739908
+    id: entangled-flames
+  - at: 739908
+    id: spreading-flames
+  - at: 741823
+    id: wyrmclaw
+  - at: 743920
+    id: mortal-vow-1
+  - at: 744945
+    id: wyrmclaw
+  - at: 756088
+    id: akh-afah
+  - at: 768265
+    id: hallowed-wings-2
+  - at: 768265
+    id: hot-tail
+  - at: 769069
+    id: hallowed-plume
+  - at: 769069
+    id: hallowed-wings-3
+  - at: 769069
+    id: hallowed-plume
+  - at: 769248
+    id: hot-tail-1
+  - at: 773388
+    id: wyrmclaw
+  - at: 777974
+    id: mortal-vow-1
+  - at: 779623
+    id: wyrmclaw
+  - at: 788089
+    id: great-wyrmsbreath-1
+  - at: 788089
+    id: dread-wyrmsbreath-1
+  - at: 788803
+    id: swirling-blizzard
+  - at: 788894
+    id: ice-breath
+  - at: 788894
+    id: holy-breath
+  - at: 788894
+    id: flame-breath
+  - at: 788894
+    id: staggering-breath
+  - at: 791882
+    id: wyrmclaw
+  - at: 793935
+    id: <untargetable>
+  - at: 793935
+    id: <untargetable>
+  - at: 795141
+    id: <targetable>
+  - at: 795141
+    id: <targetable>
+  - at: 801423
+    id: cauterize-2
+  - at: 801423
+    id: <untargetable>
+  - at: 801423
+    id: <untargetable>
+  - at: 808421
+    id: touchdown
+  - at: 808465
+    id: <targetable>
+  - at: 808465
+    id: <targetable>
+  - at: 812024
+    id: mortal-vow-1
+  - at: 813361
+    id: <untargetable>
+  - at: 821741
+    id: <untargetable>
+  - at: 829987
+    id: resentment
+  - at: 834218
+    id: <untargetable>
+  - at: 838007
+    id: <untargetable>
+  - at: 847005
+    id: shockwave-1
+  - at: 862731
+    id: alternative-end
+  - at: 871772
+    id: <targetable>
+  - at: 882019
+    id: exaflares-edge
+  - at: 883180
+    id: ice-of-ascalon
+  - at: 884827
+    id: exaflares-edge-2
+  - at: 890167
+    id: trinity
+  - at: 890435
+    id: exaflares-edge-2
+  - at: 891236
+    id: trinity-1
+  - at: 892309
+    id: exaflares-edge-2
+  - at: 894182
+    id: trinity
+  - at: 903174
+    id: akh-morns-edge
+  - at: 903975
+    id: ice-of-ascalon
+  - at: 905265
+    id: akh-morns-edge-4
+  - at: 914577
+    id: trinity
+  - at: 930652
+    id: gigaflares-edge
+  - at: 930786
+    id: ice-of-ascalon
+  - at: 934659
+    id: gigaflares-edge-2
+  - at: 947804
+    id: trinity
+  - at: 960857
+    id: exaflares-edge
+  - at: 962014
+    id: flames-of-ascalon
+  - at: 963661
+    id: exaflares-edge-2
+  - at: 969003
+    id: trinity
+  - at: 969272
+    id: exaflares-edge-2
+  - at: 970075
+    id: trinity-1
+  - at: 971188
+    id: exaflares-edge-2
+  - at: 973055
+    id: trinity
+  - at: 982060
+    id: akh-morns-edge
+  - at: 982862
+    id: ice-of-ascalon
+  - at: 984151
+    id: akh-morns-edge-4
+  - at: 994538
+    id: trinity
+  - at: 1010631
+    id: gigaflares-edge
+  - at: 1010767
+    id: ice-of-ascalon
+  - at: 1014597
+    id: gigaflares-edge-2
+  - at: 1027783
+    id: trinity
+  - at: 1040852
+    id: exaflares-edge
+  - at: 1042012
+    id: ice-of-ascalon
+  - at: 1043665
+    id: exaflares-edge-2
+  - at: 1049015
+    id: trinity
+  - at: 1049284
+    id: exaflares-edge-2
+  - at: 1050085
+    id: trinity-1
+  - at: 1051156
+    id: exaflares-edge-2
+  - at: 1053073
+    id: trinity
+  - at: 1062081
+    id: akh-morns-edge
+  - at: 1062879
+    id: flames-of-ascalon
+  - at: 1064170
+    id: akh-morns-edge-4
+  - at: 1075621
+    id: trinity
