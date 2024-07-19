@@ -524,6 +524,9 @@ timeline:
   - at: 193342
     id: forward-edge
   - at: 193342
+    link: or
+    id: backward-edge
+  - at: 193342
     id: half-full
   - at: 194907
     id: walls-of-vollok
@@ -580,9 +583,15 @@ timeline:
   - at: 350537
     id: backward-half-1
   - at: 350805
+    link: or
+    id: forward-half
+  - at: 350805
     id: aero-iii-1
   - at: 351610
     id: backward-edge
+  - at: 351610
+    link: or
+    id: forward-edge
   - at: 351610
     id: half-full
   - at: 351877
@@ -696,7 +705,13 @@ timeline:
   - at: 644989
     id: backward-half-2
   - at: 646061
+    link: or
+    id: forward-half
+  - at: 646061
     id: backward-edge
+  - at: 646061
+    link: or
+    id: forward-edge
   - at: 646061
     id: half-full
   - at: 661203
