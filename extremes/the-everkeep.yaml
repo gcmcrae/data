@@ -5,8 +5,9 @@ modified: 2024-07-13
 by:
   id: 27637301
   role: author
+tier: Dawntrail
 boss: Zorall Ja
-HP: 0
+HP: 66150000
 description: Fueled by feelings of inferiority, Zorall Ja absorbs enough aether to bend reality at the cost of his own sanity.
 status:
   magic-vulnerability-up:
@@ -49,10 +50,10 @@ actions:
   actualize:
     id: 37784
     damage: 96787
-    description: Placeholder description for Actualize
+    description: A raidwide that hits for moderate damage.
   multidirectional-divide:
     id: 37794
-    description: Placeholder description for Multidirectional Divide
+    description: Four thick lines originating from the center of the arena will spawn, dividing the daimond shaped arena into fours. Each of the lines will have tiny lines running through them, these will form a grid shaped explosion on resolution.
     children:
       - at: 11034
         id: multidirectional-divide-1
@@ -392,6 +393,9 @@ timeline:
     id: multidirectional-divide
   - at: 38208
     id: backward-half
+    link: or
+  - at: 38208
+    id: forward-half
   - at: 39281
     id: backward-edge
   - at: 39281
@@ -514,6 +518,9 @@ timeline:
     id: walls-of-vollok
   - at: 192270
     id: forward-half
+  - at: 193342
+    link: or
+    id: backward-half
   - at: 193342
     id: forward-edge
   - at: 193342
