@@ -12,48 +12,60 @@ description: Fueled by feelings of inferiority, Zorall Ja absorbs enough aether 
 status:
   magic-vulnerability-up:
     id: 2941
+    type: vuln
     duration: [1960, 4000]
-    description: Inflicted by [a:regicidal-rage], [a:chasm-of-vollok-2], [a:might-of-vollok], [a:bitter-whirlwind-1], [a:bitter-whirlwind-3]
+    description: Inflicted by [a:regicidal-rage], [a:chasm-of-vollok-2], [a:might-of-vollok], [a:bitter-whirlwind-1], [a:bitter-whirlwind-3]. Being hit by a second magic damaging mechanic while you have this debuff will cause death.
   vulnerability-up:
     id: 1789
+    type: vuln
     duration: [59960, 59420]
-    description: Inflicted by [a:half-full], [a:backward-edge], [a:burning-chains-1], [a:half-circuit-1], [a:siege-of-vollok]
+    description: Inflicted by failure of most mechanics, such as [a:half-full], [a:backward-edge], [a:burning-chains-1], [a:half-circuit-1], [a:siege-of-vollok]. Increases damage taken by 25% (additive) per stack.
   weakness:
     id: 43
+    type: impairment
     duration: 100000
     description: Inflicted by unknown
   brink-of-death:
     id: 44
+    type: impairment
     duration: 100000
     description: Inflicted by unknown
   projection:
     id: 4047
+    type: indicator
     duration: 50000
-    description: Inflicted by unknown
+    description: Inflicted by [a:projection-of-turmoil]. A player is touched by the stack line, this will be consumed and a [m:stack.party] will be executed on said player. 
   wind-resistance-down-ii:
     id: 2096
+    type: vuln
     duration: [3000, 45960]
-    description: Inflicted by [a:drum-of-vollok], [a:aero-iii-1]
+    description: Inflicted by [a:drum-of-vollok], [a:aero-iii-1]. Taking damage from another source of wind aspected damage will kill.
   liftoff:
     id: 3262
+    type: impairment
     duration: 2960
-    description: Inflicted by [a:aero-iii-1]
+    description: Inflicted by [a:aero-iii-1]. Players cannot take actions as they fly through the air.
   magic-vulnerability-up-1:
     id: 3516
+    type: vuln
     duration: 2640
-    description: Inflicted by [a:dutys-edge-2]
+    description: Inflicted by [a:dutys-edge-2]. Being hit by a second magic damaging mechanic while you have this debuff will cause death.
   burning-chains:
     id: 769
+    type: condition
     duration: 15000
-    description: Inflicted by unknown
+    description: Inflicted by [a:burning-chains]. Players must move far enough from their partner to dispell the debuff.
 actions:
   actualize:
+    mechanic: raidwide
     id: 37784
     damage: 96787
+    players: 0
     description: |
       A raidwide that hits for moderate damage.
   multidirectional-divide:
-    id: 37794
+    mechanic: aoe
+    id: 37794    
     description: |
       Four thick lines originating from the center of the arena will spawn, dividing the daimond shaped arena into fours. Each of the lines will have tiny lines running through them, these will form a grid shaped explosion on resolution.
     children:
@@ -62,88 +74,113 @@ actions:
       - at: 11034
         id: multidirectional-divide-2
   multidirectional-divide-1:
+    mechanic: aoe
     id: 37796
     description: |
       Four thick lines originating from the center of the arena will spawn, dividing the daimond shaped arena into fours. Each of the lines will have tiny lines running through them, these will form a grid shaped explosion on resolution.
   multidirectional-divide-2:
+    mechanic: aoe
     id: 37795
     description: |
       Four thick lines originating from the center of the arena will spawn, dividing the daimond shaped arena into fours. Each of the lines will have tiny lines running through them, these will form a grid shaped explosion on resolution.
   backward-half:
+    mechanic: aoe
     id: 37758
     description: |
       [boss] will jump to the bottom edge of his hitbox, cleaving the entire arena in front of him.
     resolve: |
       To resolve this mechanic players will want to move behind the bosses hitbox, and then move to the side of the arena opposite of the glowing sword on his body.
   backward-edge:
+    mechanic: aoe
     id: 39282
     damage: 109415
+    players: 0
     description: |
       The hit from backward-half or half full. Applies a [s:vulnerability-up].
   half-full:
+    mechanic: aoe
     id: 37760
     description: |
       [boss] will cleave the side of the arena denoted by the sword glowing while he is casting backward half or forward half.
   regicidal-rage:
+    mechanic: tb.tether
     id: 39227
     damage: 206702
+    players: 0
     description: |
       Two tankbuster tethers that will do high damage to the tanks that take them and cleave.
   dawn-of-an-age:
+    mechanic: raidwide.transition
     id: 37783
     damage: 96371
+    players: 0
     description: |
       A raidwide that transforms the stage into a much smaller zone, creating 4 platforms around the arena.
   vollok:
+    mechanic: aoe
     id: 37719
     description: |
       Sword patterns will appear on each of the outer platforms.
   sync:
+    mechanic: aoe
     id: 37721
     description: |
       Two of the sword patterns on the outer platforms will begin to glow. At the end of this cast the swords will teleport to the middle platform.
   chasm-of-vollok:
+    mechanic: spread
     id: 37785
     damage: 87593
+    players: 0
     description: |
       All players will reveive a yellow marker on top of their head. This will drop a sword on the tile the player is standing on after a small delay and give a [magic-vulnerability-up:] debuff.
   chasm-of-vollok-1:
     id: 37786
     damage: 102708
+    players: 0
     description: |
       All players will reveive a yellow marker on top of their head. This will drop a sword on the tile the player is standing on after a small delay and give a [magic-vulnerability-up:] debuff.
   half-full-1:
+    mechanic: spread
     id: 37736
     damage: 112495
+    players: 0
     description: |
       A half room cleave in the direction of the glowing sword next to the boss.
   greater-gateway:
+    mechanic: aoe
     id: 37761
     description: |
       Three swords will spawn on each of the outside platforms, facing two pairs of teleportation lines facing the platform. Half of the platforms will contain special lines where two of them will be green wind lines and two will be orange fire lines.
       the other two platforms will have normal blue lines.  
   blade-warp:
+    mechanic: aoe
     id: 37726
     description: |
       Three swords will spawn on the side platforms, preparing to fly forward into the greater-gateway lines.
   forged-track:
+    mechanic: aoe
     id: 37727
     description: |
       The spawned swords will fly forward, hitting a teleportation line and coming out of the end point on the main platform. If the sword hits a green line it will have an added knockback effect. If it hits an orange line, it will fill two additional lanes beside it.
     resolve: |
       If the enhanced sword hits one of the green Aero lines, it is recommended to use [s:arms-length] or similar effects to ignore the knockback. If an action like that is unavailable, try to get as close to the line the Aero infused sword is going down as possible.
   chasm-of-vollok-2:
+    mechanic: spread
     id: 37769
     damage: 87593
+    players: 0
     description: |
       All players will reveive a yellow marker on top of their head. This will drop a sword on the tile the player is standing on after a small delay and give a [magic-vulnerability-up:] debuff.
   projection-of-triumph:
+    mechanic: mech
     id: 37770
     description: |
       Sixteen different swords spawn on the ground. Two lines with [ms:dynamo] markers and [ms:chariot] markers will slowly sweep across the arena from both sides. As these lines hit the swords, the mechanic displayed on them will be executed, originating from each individual sword.
   siege-of-vollok:
+    mechanic: mech.failure
     id: 37771
     damage: 69758
+    players: 0
     description: |
       The effect of getting hit by either one of the [ms:dynamo] or the [ms:chariot]'s spawned by the lines hitting the swords. It gives the harmed player a [s:vulnerability-up].
     children:
@@ -154,9 +191,10 @@ actions:
       - at: 4961
         id: siege-of-vollok
   walls-of-vollok:
+    mechanic: mech.store
     id: 37772
     description: |
-      The effect of getting hit by one of the donut AoEs.
+      The name of the lines slowly sweeping over the arena.
     children:
       - at: 4962
         id: walls-of-vollok
@@ -165,20 +203,25 @@ actions:
       - at: 224
         id: walls-of-vollok
   forward-half:
+    mechanic: aoe
     id: 37756
     description: |
       [boss] will jump to the front edge of his hitbox, cleaving the entire arena behind him.
   forward-edge:
+    mechanic: aoe
     id: 37759
     description: |
       [boss] will side cleave towards the side of the arena where the sword is glowing.
   projection-of-turmoil:
+    mechanic: mech.status
     id: 39560
     description: |
       Players will be marked with a [s:projection] debuff and a stack line will slowly sweep the arena from the north to the south. Touching the line will consume a players' debuff but execute a [m:stack.party] on their location.
   might-of-vollok:
+    mechanic: stack.party
     id: 37773
     damage: 331549
+    players: 0
     description: |
       The [m:stack.party] the group needs to share. Created by [a:projection-of-turmoil].
     resolve: |
@@ -208,6 +251,7 @@ actions:
       - at: 5232
         id: might-of-vollok
   bitter-whirlwind:
+    mechanic: tb.mt
     id: 39229
     description: |
       A tankbuster that inflicts [s:wind-resistance-down-ii], forcing a [t:tankswap] swap between each hit, or an [t:invuln] to live through. 
@@ -221,36 +265,49 @@ actions:
       - at: 6303
         id: bitter-whirlwind-3
   bitter-whirlwind-1:
+    mechanic: tb.mt
     id: 39230
     damage: 187879
+    players: 0
     description: |
       The first hit of [a:bitter-whirlwind]
   bitter-whirlwind-2:
+    mechanic: tb.mt
     id: 39231
     damage: 187879
+    players: 0
     description: |
       The second hit of [a:bitter-whirlwind:]
   bitter-whirlwind-3:
+    mechanic: tb.mt
     id: 39232
     damage: 187879
+    players: 0
     description: |
       The third and final hit of [a:bitter-whirlwind:]
   drum-of-vollok:
+    mechanic: stack.enumeration
     id: 37774
     damage: 90340
+    players: 0
     description: A [m:stack.enumeration] that will throw the player that it did not originate from it into the air.
   vollok-1:
+    mechanic: aoe
     id: 37778
     description: |
      [boss] will place two large swords on each of the two platforms, they will explode and cover 1/4th of both sides of the arena. 
   chasm-of-vollok-3:
+    mechanic: spread
     id: 37780
     damage: 87593
+    players: 0
     description: |
       Spread markers that will hit the tile you are currently located on. Spread these so nobody overlaps as each gives a [magic-vulnerability-up:] and will kill.
   aero-iii:
+    mechanic: mech.knockback
     id: 37776
     damage: 65177
+    players: 0
     description: |
       A tornado is placed on both platforms. Walking into this will knock the player back in the direction they entered it from. It will also inflict [s:wind-resistance-down-ii:]. Players can use this to jump to the platform opposite them.
     children:
@@ -319,8 +376,10 @@ actions:
       - at: 15422
         id: aero-iii-1
   aero-iii-1:
+    mechanic: mech.knockback
     id: 37777
     damage: 65177
+    players: 0
     description: |
       A tornado is placed on both platforms. Walking into this will knock the player back in the direction they entered it from. It will also inflict [s:wind-resistance-down-ii:]. Players can use this to jump to the platform opposite them.
     children:
@@ -369,10 +428,12 @@ actions:
       - at: 7867
         id: aero-iii-1
   backward-half-1:
+    mechanic: aoe
     id: 39325
     description: |
       The boss will jump to the bottom edge of his hitbox, cleaving the entire arena in front of him.
   dutys-edge:
+    mechanic: stack.intercept
     id: 37748
     description: |
       A multi hitting [m:stack.intercept] that does high damage. Mitigate and heal as needed.
@@ -394,25 +455,33 @@ actions:
       - at: 6698
         id: dutys-edge-2
   dutys-edge-1:
+    mechanic: stack.intercept
     id: 37749
     damage: 169484
+    players: 0
     description: |
       A multi hitting [m:stack.intercept] that does high damage. Mitigate and heal as needed.
   dutys-edge-2:
+    mechanic: stack.intercept
     id: 38055
     damage: 169484
+    players: 0
     description: |
       A multi hitting [m:stack.intercept] that does high damage. Mitigate and heal as needed.
   burning-chains:
+    mechanic: mech.tether.distance
     id: 37781
     description: |
       Players will be tethered together by chains that must be snapped by going far apart from eachother.
   burning-chains-1:
+    mechanic: mech.tether.distance
     id: 37782
     damage: 73285
+    players: 0
     description: |
       Players who have failed to break the chains will be punished, with both of them taking heavy damage and receiving a [s:damage-down].
   half-circuit:
+    mechanic: aoe
     id: 37740
     description: |
       One of the swords on the side of the boss will begin to glow, preparing to cleave half of the arena on that side. Simultaneously two swords will either appear under [boss], denoting a [ms:chariot] aoe, or on the outside of his hitbox, denoting a [ms:dynamo]
@@ -420,26 +489,34 @@ actions:
       - at: 314
         id: half-circuit-2
   half-circuit-1:
+    mechanic: aoe
     id: 37792
     damage: 106619
+    players: 0
     description: |
       One of the swords on the side of the boss will begin to glow, preparing to cleave half of the arena on that side. Simultaneously two swords will either appear under [boss], denoting a [ms:chariot] aoe, or on the outside of his hitbox, denoting a [ms:dynamo]
   half-circuit-2:
+    mechanic: aoe
     id: 37791
     description: |
       One of the swords on the side of the boss will begin to glow, preparing to cleave half of the arena on that side. Simultaneously two swords will either appear under [boss], denoting a [ms:chariot] aoe, or on the outside of his hitbox, denoting a [ms:dynamo]
   half-full-3:
+    mechanic: aoe
     id: 37737
     damage: 112495
+    players: 0
     description: |
       [boss] will hold a sword out and then cleave half of the arena on the side of the outstreched sword.
   backward-half-2:
+    mechanic: aoe
     id: 37757
     description: |
       [boss] will jump to the bottom edge of his hitbox, cleaving the entire arena in front of him.
   actualize-enrage:
+    mechanic: enrage
     id: 39274
     damage: 99999999
+    players: 0
     description: |
       The enrage. [boss] will say one final quote and then slay the party. Beat the cast bar or face your doom.
 timeline:
