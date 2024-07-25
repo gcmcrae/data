@@ -7,6 +7,7 @@ by:
   role: author
 tier: Dawntrail
 boss: Zorall Ja
+party_hp: 0
 HP: 66150000
 description: Fueled by feelings of inferiority, Zorall Ja absorbs enough aether to bend reality at the cost of his own sanity.
 status:
@@ -134,6 +135,7 @@ actions:
     description: |
       All players will reveive a yellow marker on top of their head. This will drop a sword on the tile the player is standing on after a small delay and give a [magic-vulnerability-up:] debuff.
   chasm-of-vollok-1:
+    mechanic: spread
     id: 37786
     damage: 102708
     players: 0
@@ -183,25 +185,11 @@ actions:
     players: 0
     description: |
       The effect of getting hit by either one of the [ms:dynamo] or the [ms:chariot]'s spawned by the lines hitting the swords. It gives the harmed player a [s:vulnerability-up].
-    children:
-      - at: 89
-        id: siege-of-vollok
-      - at: 223
-        id: siege-of-vollok
-      - at: 4961
-        id: siege-of-vollok
   walls-of-vollok:
     mechanic: mech.store
     id: 37772
     description: |
       The name of the lines slowly sweeping over the arena.
-    children:
-      - at: 4962
-        id: walls-of-vollok
-      - at: 89
-        id: walls-of-vollok
-      - at: 224
-        id: walls-of-vollok
   forward-half:
     mechanic: aoe
     id: 37756
@@ -226,30 +214,7 @@ actions:
       The [m:stack.party] the group needs to share. Created by [a:projection-of-turmoil].
     resolve: |
       This can be resolved by following the "Bagel strat". Party members will be given markers to stand on at the start of the instance pre-pull. The two tanks will typically take their stacks alone after popping heavy mit, and then slowly following the line as it travels south,
-      with each party member following the line as it passes them. This allows for a low-effort, 
-    children:
-      - at: 135
-        id: might-of-vollok
-      - at: 4160
-        id: might-of-vollok
-      - at: 8719
-        id: might-of-vollok
-      - at: 11803
-        id: might-of-vollok
-      - at: 15423
-        id: might-of-vollok
-      - at: 22798
-        id: might-of-vollok
-      - at: 26550
-        id: might-of-vollok
-      - at: 670
-        id: might-of-vollok
-      - at: 5627
-        id: might-of-vollok
-      - at: 3611
-        id: might-of-vollok
-      - at: 5232
-        id: might-of-vollok
+      with each party member following the line as it passes them. This allows for low-effort resolution.
   bitter-whirlwind:
     mechanic: tb.mt
     id: 39229
@@ -277,14 +242,14 @@ actions:
     damage: 187879
     players: 0
     description: |
-      The second hit of [a:bitter-whirlwind:]
+      The second hit of [a:bitter-whirlwind]
   bitter-whirlwind-3:
     mechanic: tb.mt
     id: 39232
     damage: 187879
     players: 0
     description: |
-      The third and final hit of [a:bitter-whirlwind:]
+      The third and final hit of [a:bitter-whirlwind]
   drum-of-vollok:
     mechanic: stack.enumeration
     id: 37774
@@ -309,124 +274,14 @@ actions:
     damage: 65177
     players: 0
     description: |
-      A tornado is placed on both platforms. Walking into this will knock the player back in the direction they entered it from. It will also inflict [s:wind-resistance-down-ii:]. Players can use this to jump to the platform opposite them.
-    children:
-      - at: 4336
-        id: aero-iii-1
-      - at: 4695
-        id: aero-iii-1
-      - at: 5052
-        id: aero-iii-1
-      - at: 5410
-        id: aero-iii-1
-      - at: 5768
-        id: aero-iii-1
-      - at: 6126
-        id: aero-iii-1
-      - at: 6483
-        id: aero-iii-1
-      - at: 6840
-        id: aero-iii-1
-      - at: 7198
-        id: aero-iii-1
-      - at: 7556
-        id: aero-iii-1
-      - at: 7912
-        id: aero-iii-1
-      - at: 8269
-        id: aero-iii-1
-      - at: 8626
-        id: aero-iii-1
-      - at: 8984
-        id: aero-iii-1
-      - at: 9341
-        id: aero-iii-1
-      - at: 9698
-        id: aero-iii-1
-      - at: 10056
-        id: aero-iii-1
-      - at: 10414
-        id: aero-iii-1
-      - at: 10771
-        id: aero-iii-1
-      - at: 11128
-        id: aero-iii-1
-      - at: 11486
-        id: aero-iii-1
-      - at: 11845
-        id: aero-iii-1
-      - at: 12203
-        id: aero-iii-1
-      - at: 12561
-        id: aero-iii-1
-      - at: 12918
-        id: aero-iii-1
-      - at: 13275
-        id: aero-iii-1
-      - at: 13633
-        id: aero-iii-1
-      - at: 13991
-        id: aero-iii-1
-      - at: 14348
-        id: aero-iii-1
-      - at: 14706
-        id: aero-iii-1
-      - at: 15063
-        id: aero-iii-1
-      - at: 15422
-        id: aero-iii-1
+      A tornado is placed on both platforms. Walking into this will knock the player back in the direction they entered it from. It will also inflict [s:wind-resistance-down-ii]. Players can use this to jump to the platform opposite them.
   aero-iii-1:
     mechanic: mech.knockback
     id: 37777
     damage: 65177
     players: 0
     description: |
-      A tornado is placed on both platforms. Walking into this will knock the player back in the direction they entered it from. It will also inflict [s:wind-resistance-down-ii:]. Players can use this to jump to the platform opposite them.
-    children:
-      - at: 357
-        id: aero-iii-1
-      - at: 716
-        id: aero-iii-1
-      - at: 1074
-        id: aero-iii-1
-      - at: 1431
-        id: aero-iii-1
-      - at: 1789
-        id: aero-iii-1
-      - at: 2147
-        id: aero-iii-1
-      - at: 2506
-        id: aero-iii-1
-      - at: 2863
-        id: aero-iii-1
-      - at: 3220
-        id: aero-iii-1
-      - at: 3579
-        id: aero-iii-1
-      - at: 3935
-        id: aero-iii-1
-      - at: 4293
-        id: aero-iii-1
-      - at: 4651
-        id: aero-iii-1
-      - at: 5008
-        id: aero-iii-1
-      - at: 5366
-        id: aero-iii-1
-      - at: 5723
-        id: aero-iii-1
-      - at: 6080
-        id: aero-iii-1
-      - at: 6437
-        id: aero-iii-1
-      - at: 6792
-        id: aero-iii-1
-      - at: 7153
-        id: aero-iii-1
-      - at: 7511
-        id: aero-iii-1
-      - at: 7867
-        id: aero-iii-1
+      A tornado is placed on both platforms. Walking into this will knock the player back in the direction they entered it from. It will also inflict [s:wind-resistance-down-ii]. Players can use this to jump to the platform opposite them.
   backward-half-1:
     mechanic: aoe
     id: 39325
@@ -651,13 +506,13 @@ timeline:
     id: walls-of-vollok
   - at: 192270
     id: forward-half
-  - at: 193342
     link: or
+  - at: 193342    
     id: backward-half
   - at: 193342
     id: forward-edge
-  - at: 193342
     link: or
+  - at: 193342    
     id: backward-edge
   - at: 193342
     id: half-full
@@ -715,15 +570,15 @@ timeline:
     id: aero-iii
   - at: 350537
     id: backward-half-1
-  - at: 350805
     link: or
+  - at: 350805
     id: forward-half
   - at: 350805
     id: aero-iii-1
   - at: 351610
     id: backward-edge
-  - at: 351610
     link: or
+  - at: 351610
     id: forward-edge
   - at: 351610
     id: half-full
@@ -837,13 +692,13 @@ timeline:
     id: multidirectional-divide
   - at: 644989
     id: backward-half-2
-  - at: 646061
     link: or
+  - at: 646061
     id: forward-half
   - at: 646061
     id: backward-edge
-  - at: 646061
     link: or
+  - at: 646061
     id: forward-edge
   - at: 646061
     id: half-full
